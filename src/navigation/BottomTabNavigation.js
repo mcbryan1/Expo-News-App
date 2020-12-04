@@ -2,8 +2,7 @@ import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 import { FontAwesome5, FontAwesome, MaterialIcons, MaterialCommunityIcons } from "@expo/vector-icons";
-import Sports from "../screens/Sports";
-import Politics from "../screens/Politics";
+import Apple from "../screens/Apple";
 import Bitcoin from "../screens/Bitcoin";
 import Technology from "../screens/Technology";
 import Business from "../screens/Business";
@@ -15,28 +14,18 @@ const BottomTabNavigation = () => {
   return (
     <Tab.Navigator>
       <Tab.Screen
-        name="Politics"
-        component={Politics}
+        name="Apple"
+        component={Apple}
         options={{
-          tabBarLabel: "Politics",
+          tabBarLabel: "Apple",
           tabBarIcon: ({ color }) => (
-            <FontAwesome5 name="poll" color={color} size={22} />
+            <FontAwesome5 name="apple" color={color} size={22} />
           ),
-          tabBarColor: "#7e1191",
+          tabBarColor: "#000000",
 
         }}
       />
-      <Tab.Screen
-        name="Sports"
-        component={Sports}
-        options={{
-          tabBarLabel: "Sports",
-          tabBarIcon: ({ color }) => (
-            <FontAwesome name="soccer-ball-o" size={22} color={color} />
-          ),
-          tabBarColor: "#0d8a01",
-        }}
-      />
+      
       <Tab.Screen
         name="Bitcoin"
         component={Bitcoin}
@@ -52,7 +41,7 @@ const BottomTabNavigation = () => {
         name="Technology"
         component={Technology}
         options={{
-          tabBarLabel: "Tech News",
+          tabBarLabel: "TechCrunch",
           tabBarIcon: ({ color }) => (
             <MaterialCommunityIcons name="robot" size={22} color={color} />
           ),
@@ -68,7 +57,7 @@ const BottomTabNavigation = () => {
           tabBarIcon: ({ color }) => (
             <MaterialIcons name="business" size={22} color={color} />
           ),
-          tabBarColor: "#1a1301",
+          tabBarColor: "#3b0340",
 
         }}
       />
