@@ -1,14 +1,20 @@
 import React, { Component } from 'react'
 import { Text, StyleSheet, View } from 'react-native'
+import AppleTemplate from '../components/Apple/AppleTemplate'
 
 export default class Politics extends Component {
     render() {
         return (
-            <View>
-                <Text> textInComponent </Text>
+            <View style={styles.container}>
+                <AppleTemplate/>
             </View>
         )
     }
 }
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+    container:{
+        flex: 1,
+        backgroundColor: '#fff'
+    }
+})
