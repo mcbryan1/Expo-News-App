@@ -31,7 +31,8 @@ export default function Swiper() {
       autoplay={true}
       loop={true}
       autoplayInterval={3000}
-      height={80}
+      height={70}
+      style={{ position: "absolute", bottom: 10 }}
     >
       <View style={styles.swiper__container}>
         <FontAwesome5 name="apple" color="#fff" size={22} />
@@ -64,7 +65,7 @@ export default function Swiper() {
 const styles = StyleSheet.create({
   swiper__container: {
     width: width - 200,
-    height: 80,
+    height: 70,
     alignSelf: "center",
     borderRadius: 10,
     elevation: 5,
@@ -75,7 +76,7 @@ const styles = StyleSheet.create({
   },
   swiper__container__two: {
     width: width - 200,
-    height: 80,
+    height: 70,
     alignSelf: "center",
     borderRadius: 10,
     elevation: 5,
@@ -86,7 +87,7 @@ const styles = StyleSheet.create({
   },
   swiper__container__three: {
     width: width - 200,
-    height: 80,
+    height: 70,
     alignSelf: "center",
     borderRadius: 10,
     elevation: 5,
@@ -97,7 +98,7 @@ const styles = StyleSheet.create({
   },
   swiper__container__four: {
     width: width - 200,
-    height: 80,
+    height: 70,
     alignSelf: "center",
     borderRadius: 10,
     elevation: 5,
@@ -108,7 +109,7 @@ const styles = StyleSheet.create({
   },
   swiper__container__five: {
     width: width - 200,
-    height: 80,
+    height: 70,
     alignSelf: "center",
     borderRadius: 10,
     elevation: 5,
