@@ -15,7 +15,7 @@ import {
   Quicksand_700Bold,
 } from "@expo-google-fonts/quicksand";
 
-export default function AppleTemplate() {
+export default function AppleTemplate({ image, author, date, description }) {
   let [fontsLoaded, error] = useFonts({
     Regular: Quicksand_400Regular,
     ExtraBold: Quicksand_700Bold,
@@ -31,7 +31,6 @@ export default function AppleTemplate() {
     >
       <View style={styles.child}></View>
       <Header />
-
       <View style={styles.news__card}>
         <Image
           source={apple}
@@ -41,14 +40,21 @@ export default function AppleTemplate() {
           ]}
         />
         <TouchableOpacity style={styles.share__button}>
-          <FontAwesome5 name="share" size={20} color="#fff" style={styles.share__button}/>
+          <FontAwesome5
+            name="share"
+            size={20}
+            color="#fff"
+            style={styles.share__button}
+          />
         </TouchableOpacity>
         <View style={styles.news__card__text__container}>
           <View style={styles.news__card__text}>
-            <Text style={styles.news__card__time}>10 October 2020</Text>
+            <View style={{flexDirection: 'row', justifyContent: 'space-between'}}> 
+              <Text style={styles.news__card__time}>20-05-16</Text>
+              <Text style={styles.news__card__time}>Solomon</Text>
+            </View>
             <Text numberOfLines={4} style={styles.news__card__content}>
-              Apple Just launched a world class App to compete with other Tech
-              Giants such as Samsung and Motorola
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque perspiciatis eaque necessitatibus voluptatum cupiditate, quisquam quidem doloribus quia pariatur ipsum?
             </Text>
           </View>
         </View>
@@ -63,7 +69,7 @@ const styles = StyleSheet.create({
   },
   child: {
     flex: 1,
-    backgroundColor: "rgba(0,0,0,0.6)",
+    backgroundColor: "rgba(0,0,0,0.7)",
   },
   news__card: {
     position: "absolute",
@@ -91,7 +97,7 @@ const styles = StyleSheet.create({
   news__card__time: {
     fontFamily: "Medium",
     color: "#aaa",
-    fontSize: 12,
+    fontSize: 13,
     marginVertical: 10,
   },
   news__card__content: {
@@ -100,13 +106,13 @@ const styles = StyleSheet.create({
     fontSize: 20,
     marginVertical: 10,
   },
-  share__button__container:{
-      margin: 10
+  share__button__container: {
+    margin: 10,
   },
-  share__button:{
+  share__button: {
     backgroundColor: "rgba(0,0,0,0.8)",
-    alignSelf: 'flex-end',
+    alignSelf: "flex-end",
     padding: 10,
     borderRadius: 50,
-  }
+  },
 });
