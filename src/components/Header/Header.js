@@ -19,7 +19,7 @@ export default function Header() {
   }
   return (
     <View style={styles.container}>
-      <Text style={styles.container__text}> Browse News</Text>
+      <Text style={styles.container__text}>All News From Apple</Text>
     </View>
   );
 }
@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
   },
   container__text: {
     fontFamily: "ExtraBold",
-    fontSize: 26,
+    fontSize: 24,
     color: '#fff'
   },
 });
