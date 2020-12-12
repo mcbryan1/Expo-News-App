@@ -1,6 +1,13 @@
 import React, { Component } from "react";
-import { Text, StyleSheet, View, Image, Dimensions, TouchableOpacity } from "react-native";
-import {FontAwesome5} from '@expo/vector-icons'
+import {
+  Text,
+  StyleSheet,
+  View,
+  Image,
+  Dimensions,
+  TouchableOpacity,
+} from "react-native";
+import { FontAwesome5 } from "@expo/vector-icons";
 const { width, height } = Dimensions.get("window");
 
 export default class Temp extends Component {
@@ -8,13 +15,15 @@ export default class Temp extends Component {
     const { navigation } = this.props;
     return (
       <View style={styles.news__card}>
-        <Image source={{uri: this.props.image}} style={styles.news__card__image} />
-        <TouchableOpacity style={styles.share__button}>
-          <FontAwesome5
-            name="share"
-            size={23}
-            color="#fff"
-          />
+        <Image
+          source={{ uri: this.props.image }}
+          style={styles.news__card__image}
+        />
+        <TouchableOpacity
+          style={styles.share__button}
+          onPress={() => this.props.articles(this.props.url)}
+        >
+          <FontAwesome5 name="share" size={23} color="#fff" />
         </TouchableOpacity>
 
         <View style={styles.news__card__text__container}>
@@ -23,11 +32,26 @@ export default class Temp extends Component {
               style={{ flexDirection: "row", justifyContent: "space-between" }}
             >
               <Text style={styles.news__card__time}>{this.props.date}</Text>
-              <Text style={styles.news__card__time}>{this.props.author}</Text>
+              <Text style={styles.news__card__time}>{this.props.source}</Text>
             </View>
-            <Text numberOfLines={4} style={styles.news__card__content}>
-              {this.props.description}
-            </Text>
+            <TouchableOpacity
+              onPress={() => {
+                navigation.navigate("AppleDetails", {
+                  author: this.props.author,
+                  image: this.props.image,
+                  description: this.props.description,
+                  url: this.props.url,
+                  articles: this.props.articles,
+                  content: this.props.content,
+                  source: this.props.source,
+                  date: this.props.date,
+                });
+              }}
+            >
+              <Text numberOfLines={4} style={styles.news__card__content}>
+                {this.props.description}
+              </Text>
+            </TouchableOpacity>
           </View>
         </View>
       </View>
@@ -51,12 +75,12 @@ const styles = StyleSheet.create({
     height: 490,
   },
   share__button: {
-      position: 'absolute',
+    position: "absolute",
     backgroundColor: "rgba(0,0,0,0.8)",
     alignSelf: "flex-end",
     padding: 15,
     borderRadius: 50,
-    top: 2
+    top: 2,
   },
   news__card__text__container: {
     width: "100%",
