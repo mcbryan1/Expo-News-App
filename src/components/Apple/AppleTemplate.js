@@ -6,11 +6,12 @@ import {
   Image,
   Dimensions,
   TouchableOpacity,
+  Linking,
 } from "react-native";
 import { FontAwesome5 } from "@expo/vector-icons";
 const { width, height } = Dimensions.get("window");
 
-export default class Temp extends Component {
+export default class AppleTemplate extends Component {
   render() {
     const { navigation } = this.props;
     return (
@@ -34,24 +35,12 @@ export default class Temp extends Component {
               <Text style={styles.news__card__time}>{this.props.date}</Text>
               <Text style={styles.news__card__time}>{this.props.source}</Text>
             </View>
-            <TouchableOpacity
-              onPress={() => {
-                navigation.navigate("AppleDetails", {
-                  author: this.props.author,
-                  image: this.props.image,
-                  description: this.props.description,
-                  url: this.props.url,
-                  articles: this.props.articles,
-                  content: this.props.content,
-                  source: this.props.source,
-                  date: this.props.date,
-                });
-              }}
-            >
-              <Text numberOfLines={4} style={styles.news__card__content}>
-                {this.props.description}
+            <TouchableOpacity onPress={() => Linking.openURL(this.props.url)}>
+              <Text numberOfLines={7} style={styles.news__card__content}>
+                {this.props.content}
               </Text>
             </TouchableOpacity>
+            <Text style={styles.news__card__time}>{this.props.author}</Text>
           </View>
         </View>
       </View>
@@ -84,7 +73,7 @@ const styles = StyleSheet.create({
   },
   news__card__text__container: {
     width: "100%",
-    backgroundColor: "rgba(0,0,0,0.8)",
+    backgroundColor: "rgba(0,0,0,0.9)",
     borderBottomLeftRadius: 30,
     borderBottomRightRadius: 30,
     position: "absolute",
