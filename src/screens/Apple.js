@@ -1,14 +1,12 @@
 import React, { Component } from "react";
 import { Text, StyleSheet, View, FlatList, Share,ActivityIndicator } from "react-native";
-import AppleDetails from "../components/Apple/AppleDetails";
 import AppleView from "../components/Apple/AppleView";
 
 export default class Apple extends Component {
   
   render() {
     return(
-      // <AppleView/>
-      <AppleDetails/>
+      <AppleView/>
     )
     }
   

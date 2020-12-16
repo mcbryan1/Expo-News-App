@@ -2,7 +2,6 @@ import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { createStackNavigator } from "@react-navigation/stack";
 import BottomTabNavigation from "./BottomTabNavigation";
-import AppleDetails from "../components/Apple/AppleDetails";
 
 const Stack = createStackNavigator();
 const StackNavigation = () => {
@@ -13,11 +12,7 @@ const StackNavigation = () => {
         name="tabs"
         component={BottomTabNavigation}
       />
-      <Stack.Screen
-        name="AppleDetails"
-        component={AppleDetails}
-        options={{ headerShown: false }}
-      />
+      
     </Stack.Navigator>
   );
 };

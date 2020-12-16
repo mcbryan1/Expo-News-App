@@ -19,7 +19,7 @@ export default class AppleView extends Component {
   //Fetching Apple News
   fetchNews = () => {
     fetch(
-      "http://newsapi.org/v2/everything?q=apple&from=2020-12-11&to=2020-12-11&sortBy=popularity&apiKey=78cd204c8fb145ea84c750e8b260c7f4"
+      "http://newsapi.org/v2/everything?q=apple&from=2020-12-11&sortBy=popularity&apiKey=78cd204c8fb145ea84c750e8b260c7f4"
     )
       .then((res) => res.json())
       .then((response) => {
@@ -90,7 +90,7 @@ export default class AppleView extends Component {
                     />
                   );
                 }}
-                keyExtractor={(item) => item.source.publishedAt}
+                keyExtractor={(item) => item.source.description}
               />
             </SafeAreaView>
           </View>
