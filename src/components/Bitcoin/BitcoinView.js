@@ -1,9 +1,18 @@
 import React, { Component } from "react";
-import { Text, StyleSheet, View , ActivityIndicator, FlatList, Share} from "react-native";
+import {
+  Text,
+  StyleSheet,
+  View,
+  ActivityIndicator,
+  FlatList,
+  Share,
+} from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import ImageBackground from "react-native/Libraries/Image/ImageBackground";
 import bitcoinbackground from "../../../assets/images/bitcoinbackground.jpg";
 import BitcoinTemplate from "./BitcoinTemplate";
+import BitHeader from '../Header/BitHeader'
+
 
 export default class BitcoinView extends Component {
   constructor(props) {
@@ -68,7 +77,8 @@ export default class BitcoinView extends Component {
           resizeMode="cover"
         >
           <View style={styles.overlay}>
-          <SafeAreaView style={styles.container}>
+            <SafeAreaView style={styles.container}>
+              <BitHeader />
               <FlatList
                 showsHorizontalScrollIndicator={false}
                 horizontal={true}
@@ -101,6 +111,6 @@ export default class BitcoinView extends Component {
 const styles = StyleSheet.create({
   overlay: {
     ...StyleSheet.absoluteFillObject,
-    backgroundColor: "rgba(235,146,52,0.5)", 
+    backgroundColor: "rgba(235,146,52,0.5)",
   },
 });
