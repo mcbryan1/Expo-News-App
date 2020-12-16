@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 import { Text, StyleSheet, View } from 'react-native'
+import BitcoinTemplate from '../components/Bitcoin/BitcoinTemplate'
+import BitcoinView from '../components/Bitcoin/BitcoinView'
 
 export default class Bitcoin extends Component {
     render() {
         return (
-            <View>
-                <Text> textInComponent </Text>
-            </View>
+            // <BitcoinTemplate/>
+           <BitcoinView/>
         )
     }
 }
