@@ -19,14 +19,14 @@ export default function Header() {
   }
   return (
     <View style={styles.container}>
-      <Text style={styles.container__text}>All News From Apple</Text>
+      <Text style={styles.container__text}>Trending News From Apple</Text>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    marginHorizontal: 30,
+    marginHorizontal: 20,
     marginVertical: 30,
     position: 'absolute',
   },
