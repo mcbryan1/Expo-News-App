@@ -13,7 +13,7 @@ export default class BitcoinTemplate extends Component {
         />
         <TouchableOpacity
           style={styles.share__button}
-        //   onPress={() => this.props.articles(this.props.url)}
+          onPress={() => this.props.articles(this.props.url)}
         >
           <FontAwesome5 name="share" size={23} color="#fff" />
         </TouchableOpacity>
