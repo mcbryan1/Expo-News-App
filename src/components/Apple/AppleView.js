@@ -90,7 +90,7 @@ export default class AppleView extends Component {
                     />
                   );
                 }}
-                keyExtractor={(item) => item.source.description}
+                keyExtractor={(item) => item.title}
               />
             </SafeAreaView>
           </View>

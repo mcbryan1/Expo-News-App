@@ -27,7 +27,7 @@ export default class BitcoinView extends Component {
   //Fetching Bitcoin News
   fetchNews = () => {
     fetch(
-      "http://newsapi.org/v2/everything?q=bitcoin&from=2020-11-16&sortBy=publishedAt&apiKey=78cd204c8fb145ea84c750e8b260c7f4"
+      "http://newsapi.org/v2/everything?q=bitcoin&from=2020-11-17&sortBy=publishedAt&apiKey=78cd204c8fb145ea84c750e8b260c7f4"
     )
       .then((res) => res.json())
       .then((response) => {
@@ -99,7 +99,7 @@ export default class BitcoinView extends Component {
                     />
                   );
                 }}
-                keyExtractor={(item) => item.source.description}
+                keyExtractor={(item) => item.title}
               />
             </SafeAreaView>
           </View>
