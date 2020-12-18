@@ -97,7 +97,7 @@ export default class WallStreetView extends Component {
                     />
                   );
                 }}
-                keyExtractor={(item) => item.source.url}
+                keyExtractor={(item) => item.url}
               />
             </SafeAreaView>
           </View>

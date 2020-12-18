@@ -98,7 +98,7 @@ export default class TechnologyView extends Component {
                     />
                   );
                 }}
-                keyExtractor={(item) => item.source.description}
+                keyExtractor={(item) => item.url}
               />
             </SafeAreaView>
         </View>

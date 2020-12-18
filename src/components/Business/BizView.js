@@ -99,7 +99,7 @@ export default class BizView extends Component {
                     />
                   );
                 }}
-                keyExtractor={(item) => item.title}
+                keyExtractor={(item) => item.url}
               />
             </SafeAreaView>
           </View>

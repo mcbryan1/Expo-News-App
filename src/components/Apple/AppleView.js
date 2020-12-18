@@ -1,5 +1,12 @@
 import React, { Component } from "react";
-import { Text, StyleSheet, View, FlatList, Share,ActivityIndicator } from "react-native";
+import {
+  Text,
+  StyleSheet,
+  View,
+  FlatList,
+  Share,
+  ActivityIndicator,
+} from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import ImageBackground from "react-native/Libraries/Image/ImageBackground";
 import AppleTemplate from "./AppleTemplate";
@@ -90,11 +97,7 @@ export default class AppleView extends Component {
                     />
                   );
                 }}
-
-                keyExtractor={(item) => item.title}
-
                 keyExtractor={(item) => item.source.url}
-
               />
             </SafeAreaView>
           </View>
