@@ -27,7 +27,7 @@ export default class BizView extends Component {
   //Fetching Bitcoin News
   fetchNews = () => {
     fetch(
-      "http://newsapi.org/v2/everything?q=bitcoin&from=2020-11-17&sortBy=publishedAt&apiKey=78cd204c8fb145ea84c750e8b260c7f4"
+      "http://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=78cd204c8fb145ea84c750e8b260c7f4"
     )
       .then((res) => res.json())
       .then((response) => {
