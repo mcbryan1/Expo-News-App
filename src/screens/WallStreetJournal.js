@@ -1,12 +1,11 @@
 import React, { Component } from 'react'
 import { Text, StyleSheet, View } from 'react-native'
+import WallStreetView from '../components/WallStreet/WallStreetView'
 
 export default class WallStreetJournal extends Component {
     render() {
         return (
-            <View>
-                <Text> textInComponent </Text>
-            </View>
+           <WallStreetView/>
         )
     }
 }
